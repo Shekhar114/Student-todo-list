@@ -37,30 +37,30 @@
 	</div>
 
 	<div class="row">
-		<form>
+		<form action ="/AddNewStudent" ab:object="${student}" method="post">
 		<div class="mb-3">
 				<label for="id" class="form-label">Roll No</label>
-				<input type="number" id="id" name="id">
+				<input type="number" id="id" name="id" ab:field="id">
 			</div>
 			<div class="mb-3">
 				<label for="name" class="form-label">Name</label>
-				<input type="text" id="name" name="name">
+				<input type="text" id="name" name="name" ab:field="name">
 			</div>
 			<div class="mb-3">
 				<label for="dateOfBirth" class="form-label">DOB</label>
-				<input type="date" id="dateOfBirth" name="dob">
+				<input type="date" id="dateOfBirth" name="dob" ab:field="dob">
 			</div>
 			<div class="mb-3">
 				<label for="email" class="form-label">Email</label>
-				<input type="email" id="email" name="email">
+				<input type="email" id="email" name="email" ab:field="email">
 			</div>
 			<div class="mb-3">
 				<label for="contact" class="form-label">Phone</label>
-				<input type="tel" id="contact" name="contact">
+				<input type="tel" id="contact" name="contact" ab:field="contact">
 			</div>
 			<div class="mb-3">
 				<label for="class" class="form-label">Class</label>
-				<input type="text" id="class" name="class">
+				<input type="text" id="class" name="className" ab:field="className">
 			</div>
 			<div class="mb-3">
 				<button class="btn btn-primary" type="submit" >Create</button>

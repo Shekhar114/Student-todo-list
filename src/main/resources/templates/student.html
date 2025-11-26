@@ -44,40 +44,34 @@
 	
 	</div>
 	
-	
-	
-	<table class="table table-bordered">
-	  <thead class="table-dark">
-		<tr>
-		<th>Id</th>
-		<th>Name</th>
-		<th>DOB</th>
-		<th>Email</th>
-		<th>Contact</th>
-		<th>Class</th>
-		<th colspan="2" >Action</th>
-		</tr>
-	  </thead>
-	  <tbody>
-	  	<tr>
-	  		<!-- Data insertion -->
-	  		<td>1001</td>
-	  		<td>Ajay</td>
-	  		<td>12-07-2004</td>
-	  		<td>ajay@gmail.com</td>
-	  		<td>9912324343</td>
-	  		<td>B.Tech</td>
-	  		
-	  		<!-- link another page update and delete -->
-	  		<td><button type="button" class="btn btn-danger" href="#">Delete</button></td>
-	  		<td><a th:href="@{/student/edit}" class="btn btn-primary">Update</a></td>
-	  	</tr>
-	  </tbody>
-	  	
-	
-	
-	
-	</table>
+
+<table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Class</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr th:each="s1 : ${students}">
+      <td th:text="${s1.id}"></td>
+      <td th:text="${s1.name}"></td>
+      <td th:text="${s1.dob}"></td>
+      <td th:text="${s1.email}"></td>
+      <td th:text="${s1.contact}"></td>
+      <td th:text="${s1.className}"></td>
+      
+      <td><button type="button" class="btn btn-danger">Delete</button></td>
+      <td><a th:href="@{/student/edit}" class="btn btn-primary">Update</a></td>
+    </tr>
+  </tbody>
+</table>
 
 	
 	
