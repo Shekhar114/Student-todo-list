@@ -67,8 +67,8 @@
       <td th:text="${s1.contact}"></td>
       <td th:text="${s1.className}"></td>
       
-      <td><button type="button" class="btn btn-danger">Delete</button></td>
-      <td><a th:href="@{/student/edit}" class="btn btn-primary">Update</a></td>
+      <td><a th:href="@{/student/edit/{id} (id=${s1.id})}" class="btn btn-primary">Update</a></td>
+      <td><a th:href="@{/student/delete/{id} (id=${s1.id})}" class="btn btn-danger">Delete</a></td>
     </tr>
   </tbody>
 </table>

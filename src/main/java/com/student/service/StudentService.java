@@ -2,6 +2,7 @@ package com.student.service;
 
 import java.util.List;
 
+
 import com.student.entity.Student;
 
 public interface StudentService {
@@ -10,7 +11,9 @@ public interface StudentService {
 	
 	public List<Student> findAllStudent();
 	
-	public Student updateStudent(Student student);
+	public void updateStudent(Student student);
+	
+	public Student findByIdStudent(int id);
 	
 	public void deleteStudent(int id);
 	
